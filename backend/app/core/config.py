@@ -153,7 +153,7 @@ def load_settings() -> Settings:
         app_name=env.APP_NAME,
         app_version=env.APP_VERSION,
         debug=env.DEBUG,
-        environment=env.ENVIRONMENT,
+        environment=env.APP_ENVIRONMENT,
         port=env.APP_PORT,
     )
 
