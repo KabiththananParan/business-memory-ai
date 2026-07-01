@@ -5,11 +5,18 @@ class ApplicationConfig(BaseModel):
     app_name: str
     app_version: str
     debug: bool
+    environment: str
+    port: int
+    
     
 class LLMConfig(BaseModel):
     provider: str
     model: str
     api_key: str
+    temperature: float
+    max_tokens: int
+    top_p: float
+    timeout: int
     
     
 class EmbeddingConfig(BaseModel):
@@ -19,7 +26,7 @@ class EmbeddingConfig(BaseModel):
 
 
 class CogneeConfig(BaseModel):
-    environment: bool
+    environment: str
     dataset_name: str
     api_key: str
     
@@ -35,11 +42,12 @@ class Neo4jConfig(BaseModel):
     uri: str
     username: str
     password: str
+    database: str
 
 
 class QdrantConfig(BaseModel):
     url: str
-    api_key: int
+    api_key: str
     collection_name: str
 
 
